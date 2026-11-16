@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — GTA Clip Studio</title>
+<meta name="description" content="Privacy Policy of GTA Clip Studio, a private tool that edits gameplay highlights into Shorts and uploads them to the operator's own YouTube channels.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html">GTA <span>Clip</span> Studio</a>
+  <nav><a href="index.html">About</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+<main>
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: November 16, 2026</p>
+
+<p>GTA Clip Studio (“the App”, “we”, “us”) is a private, self-hosted tool operated by <strong>Yaroslav</strong>.
+It turns highlights of public gameplay streams into short vertical videos and uploads them to YouTube channels
+that the operator owns. This policy explains what data the App accesses, how it is used, stored and shared,
+and how you can revoke access.</p>
+
+<div class="card">
+<strong>Short version:</strong> the App only asks Google for permission to upload videos to your channel
+(<code>youtube.upload</code>). It does not read your emails, contacts, watch history, comments, subscribers or any
+other personal data, does not sell or share data, and shows no ads. You can revoke access at any time.
+</div>
+
+<h2>1. Use of YouTube API Services</h2>
+<p>The App uses <strong>YouTube API Services</strong> to upload videos to the channel you authorize. By connecting a YouTube channel to the App you agree to be bound by the
+<a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google’s handling of your data is described in the
+<a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<h2>2. Google user data we access</h2>
+<div class="table-wrap">
+<table>
+<tr><th>Data</th><th>Why</th><th>Where it is kept</th></tr>
+<tr><td>OAuth access and refresh tokens for the <code>youtube.upload</code> scope</td>
+    <td>To upload videos to the authorized channel</td>
+    <td>Only on the operator’s server, in a file readable by the operator alone</td></tr>
+<tr><td>IDs of videos the App uploaded, their titles and upload time</td>
+    <td>To avoid uploading the same clip twice and to respect daily limits</td>
+    <td>A local upload log on the operator’s server</td></tr>
+</table>
+</div>
+<p>The App does <strong>not</strong> request, read or store: your name, email address, profile, contacts, channel analytics,
+watch history, comments, subscriptions, or any data of other YouTube users.</p>
+
+<h2>3. How we use the data</h2>
+<ul>
+  <li>Solely to upload videos that the operator created with the App to the channel you authorized.</li>
+  <li>Not for advertising, profiling, analytics, selling, or training machine-learning models.</li>
+  <li>No human other than the operator has access to the tokens or the upload log.</li>
+</ul>
+<p>The App’s use and transfer of information received from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+including the Limited Use requirements.</p>
+
+<h2>4. Sharing</h2>
+<p>We do not sell, rent or share Google user data with anyone. Tokens are sent only to Google’s own servers
+when the App calls the YouTube API.</p>
+<p>To edit clips, the App may send <em>video content and transcripts of public gameplay streams</em> (not Google user data)
+to processing services the operator chooses to enable:</p>
+<ul>
+  <li>Anthropic (Claude API) — to write video titles, descriptions and hashtags from a clip’s transcript;</li>
+  <li>ElevenLabs — to generate an optional voice-over from text the operator writes;</li>
+  <li>Twitch API — to find public streams and public viewer clips.</li>
+</ul>
+<p>None of these services receive your Google account data or OAuth tokens.</p>
+
+<h2>5. Storage, security and retention</h2>
+<ul>
+  <li>Tokens are stored on the operator’s server with file permissions restricted to the operator and transmitted only over HTTPS.</li>
+  <li>Tokens are kept until you revoke access or the operator disconnects the channel; they are then deleted.</li>
+  <li>The upload log keeps video IDs and titles for up to 12 months, then is deleted.</li>
+  <li>Downloaded stream footage is temporary working data and is deleted after the clips are rendered.</li>
+</ul>
+
+<h2>6. Revoking access and deleting data</h2>
+<ul>
+  <li>Revoke the App’s access to your Google account at any time at
+      <a href="https://security.google.com/settings/security/permissions">Google security settings → Third-party access</a>.
+      After revocation the App can no longer upload anything.</li>
+  <li>To have the stored token and upload log deleted, email <a href="mailto:lytvynyaroslav9@gmail.com">lytvynyaroslav9@gmail.com</a>;
+      we delete them within 7 days and confirm by email.</li>
+  <li>Videos already published stay on your channel until you remove them in YouTube Studio.</li>
+</ul>
+
+<h2>7. Creators whose streams are clipped</h2>
+<p>Clips are made from publicly available streams. Every clip credits the original creator on screen and in the
+description with a link to the source. If you are a creator and want your content removed or excluded from future
+clips, email <a href="mailto:lytvynyaroslav9@gmail.com">lytvynyaroslav9@gmail.com</a> — we remove it promptly and add your channel to an exclusion list.</p>
+
+<h2>8. Children</h2>
+<p>The App is not directed to children under 13 (or the minimum age in your country) and does not knowingly process their data.</p>
+
+<h2>9. Changes</h2>
+<p>We may update this policy. The “Last updated” date above shows the latest version. Material changes will be
+reflected here before they take effect.</p>
+
+<h2>10. Contact</h2>
+<p>Yaroslav — <a href="mailto:lytvynyaroslav9@gmail.com">lytvynyaroslav9@gmail.com</a></p>
+</main>
+<footer>
+  © 2026 GTA Clip Studio · <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a>
+</footer>
+</body>
+</html>
