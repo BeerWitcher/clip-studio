@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect TikTok — Clip Studio</title>
+<meta name="description" content="Connect a TikTok account to Clip Studio so finished clips arrive in your TikTok inbox as drafts.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><span>Clip</span> Studio</a>
+  <nav><a href="index.html">About</a><a href="connect.html" aria-current="page">Connect</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+<main>
+<h1>Connect your TikTok account</h1>
+<p>Clip Studio edits gameplay highlights into short vertical videos. After you connect TikTok, each finished clip is
+uploaded to <strong>your TikTok inbox as a draft</strong>. You get a notification in the TikTok app, review the draft,
+write or paste the caption and post it yourself. Nothing is published without you.</p>
+<div class="card">
+<strong>Permissions requested</strong>
+<ul>
+  <li><code>user.info.basic</code> — to show which TikTok account is connected (display name, avatar, open_id).</li>
+  <li><code>video.upload</code> — to send finished clips to your TikTok inbox as drafts.</li>
+</ul>
+Clip Studio does not read your videos, followers, messages or analytics. Revoke access any time in
+TikTok → Settings and privacy → Security → Manage app permissions.
+</div>
+<p><a id="go" class="button" href="#">Continue with TikTok</a></p>
+<p class="updated">By continuing you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+</main>
+<script>
+const CLIENT_KEY = "sbawo63bz4sq58cvw2";
+const REDIRECT = "https://beerwitcher.github.io/clip-studio/tiktok-callback.html";
+const state = Math.random().toString(36).slice(2) + Date.now().toString(36);
+document.getElementById("go").href = "https://www.tiktok.com/v2/auth/authorize/?" + new URLSearchParams({
+  client_key: CLIENT_KEY, scope: "user.info.basic,video.upload", response_type: "code", redirect_uri: REDIRECT, state
+});
+</script>
+</body>
+</html>

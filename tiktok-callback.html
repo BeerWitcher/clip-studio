@@ -21,7 +21,7 @@ TikTok → Settings and privacy → Security → Manage app permissions.</p>
 <script>
 const q = new URLSearchParams(location.search), box = document.getElementById("box"), btn = document.getElementById("copy");
 if (q.get("code")) {
-  box.textContent = "TikTok returned an authorization code. Copy this page address and give it to Clip Studio.";
+  box.innerHTML = "✅ <strong>TikTok connected.</strong> Clip Studio will send finished clips to your TikTok inbox as drafts. (Operator: copy this page address into Clip Studio to finish setup.)";
   btn.hidden = false;
   btn.onclick = () => navigator.clipboard.writeText(location.href).then(() => btn.textContent = "Copied ✓");
 } else {
