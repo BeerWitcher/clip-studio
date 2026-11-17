@@ -34,7 +34,7 @@ const CLIENT_KEY = "sbawo63bz4sq58cvw2";
 const REDIRECT = "https://beerwitcher.github.io/clip-studio/tiktok-callback.html";
 const state = Math.random().toString(36).slice(2) + Date.now().toString(36);
 document.getElementById("go").href = "https://www.tiktok.com/v2/auth/authorize/?" + new URLSearchParams({
-  client_key: CLIENT_KEY, scope: "user.info.basic,video.upload", response_type: "code", redirect_uri: REDIRECT, state
+  client_key: CLIENT_KEY, scope: "user.info.basic,video.upload", response_type: "code", redirect_uri: REDIRECT, state, disable_auto_auth: "1"
 });
 </script>
 </body>
