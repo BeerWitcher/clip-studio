@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok connected — Clip Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="index.html"><span>Clip</span> Studio</a>
+  <nav><a href="index.html">About</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+</header>
+<main>
+<h1>TikTok authorization</h1>
+<div class="card" id="box">Reading the response…</div>
+<p><button id="copy" hidden>Copy this page address</button></p>
+<p>Paste the copied address back into Clip Studio to finish connecting. You can revoke access any time in
+TikTok → Settings and privacy → Security → Manage app permissions.</p>
+</main>
+<script>
+const q = new URLSearchParams(location.search), box = document.getElementById("box"), btn = document.getElementById("copy");
+if (q.get("code")) {
+  box.textContent = "TikTok returned an authorization code. Copy this page address and give it to Clip Studio.";
+  btn.hidden = false;
+  btn.onclick = () => navigator.clipboard.writeText(location.href).then(() => btn.textContent = "Copied ✓");
+} else {
+  box.textContent = "No code in the address. " + (q.get("error_description") || q.get("error") || "Start the login again from Clip Studio.");
+}
+</script>
+</body>
+</html>
